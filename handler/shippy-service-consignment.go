@@ -1,0 +1,20 @@
+package handler
+
+import (
+	"context"
+	"fmt"
+
+	"go-micro.dev/v4/logger"
+
+	pb "shippy-service-consignment/proto"
+)
+
+type ShippyServiceConsignment struct{}
+
+func (e *ShippyServiceConsignment) CreateConsignment(ctx context.Context, req *pb.Consignment, rsp *pb.Response) error {
+	logger.Infof("Received ShippyServiceConsignment.Call request: %v", req)
+
+	fmt.Println("hi")
+
+	return nil
+}
