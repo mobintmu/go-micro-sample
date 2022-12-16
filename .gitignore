@@ -12,7 +12,10 @@
 *.out
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
+vendor/
+.env
 
 # don't commit the service binary to vcs
-shippy-service-consignment
+shippy-service
+
+

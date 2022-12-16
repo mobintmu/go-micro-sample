@@ -1,13 +1,11 @@
 package main
 
 import (
-
 	"shippy-service-consignment/handler"
 	pb "shippy-service-consignment/proto"
 
 	"go-micro.dev/v4"
 	"go-micro.dev/v4/logger"
-
 )
 
 var (
@@ -16,9 +14,9 @@ var (
 )
 
 func main() {
+
 	// Create service
-	srv := micro.NewService(
-	)
+	srv := micro.NewService()
 	srv.Init(
 		micro.Name(service),
 		micro.Version(version),
@@ -32,4 +30,5 @@ func main() {
 	if err := srv.Run(); err != nil {
 		logger.Fatal(err)
 	}
+
 }
